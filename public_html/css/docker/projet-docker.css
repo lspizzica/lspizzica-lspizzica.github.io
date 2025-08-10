@@ -1,0 +1,68 @@
+
+
+/* Style pour les sections */
+.container2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Centrage vertical des sections */
+    flex-wrap: wrap;
+    margin-top: 50px; /* Marge en haut pour espacer du header */
+}
+body{
+    background-image: url('../../image/1.jpg'); /* Remplacez 'votre-image.jpg' par le chemin de votre image d'arrière-plan */
+    background-size: cover; /* Ajustez la taille de l'image pour couvrir tout le conteneur */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center; /* Centre l'image à l'intérieur du conteneur */
+    
+
+}
+.container2 a,
+.docker.php a
+h2{
+    text-decoration: none !important; /* Supprime les soulignements par défaut des liens */
+}
+section {
+    text-align: center;
+    padding: 20px;
+    width: 300px; /* Largeur fixe pour chaque section */
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre portée */
+    transition: transform 0.3s ease;
+    background-color: #fff; /* Couleur de fond des sections */
+    
+}
+
+section:hover {
+    transform: translateY(-5px); /* Effet de translation au survol */
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333; /* Couleur de titre */
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Coins arrondis pour les images */
+}
+
+/* Style pour les liens */
+a {
+    text-decoration: none;
+    color: #007bff; /* Couleur du lien */
+    transition: color 0.3s ease; /* Transition de couleur au survol */
+}
+
+a:hover {
+    color: #0056b3; /* Couleur du lien au survol */
+}
+
+/* Style pour le container principal */
+.container1 {
+    margin-top: 10%;
+    padding: 20px;
+    
+}

@@ -1,0 +1,89 @@
+/* Styles de base */
+html, body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    height: 100%; /* S'assurer que le html et body prennent toute la hauteur */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container principal */
+.portfolio-container {
+    display: flex;
+    flex: 1; /* Prend tout l'espace disponible avant le footer */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+     background-image: url('../image/arriereplan-index.png'); /* Assurez-vous que le chemin est correct */
+         background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Section de l'image */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    max-width: 70%; /* Taille de l'image réduite */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Section du texte */
+.text-container {
+    flex: 2;
+    padding-left: 20px;
+    color: white;
+}
+
+.text-container p {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    flex-shrink: 0; /* Le footer reste en bas même s'il n'y a pas assez de contenu */
+}
+
+/* Styles responsives */
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .image-container {
+        margin-bottom: 20px;
+    }
+
+    .profile-image {
+        max-width: 50%; /* Réduction supplémentaire de la taille de l'image sur mobile */
+    }
+
+    .text-container {
+        padding-left: 0;
+        text-align: center; /* Centrer le texte sur mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        max-width: 40%; /* Réduction encore plus importante pour les très petits écrans */
+    }
+}

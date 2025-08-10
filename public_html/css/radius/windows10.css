@@ -1,0 +1,86 @@
+
+
+/* Styles pour les titres */
+.title1,
+.title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.title h2 {
+  font-size: 28px;
+  color: #333;
+  text-transform: uppercase;
+}
+img{
+  margin: 5px;
+}
+li{
+  margin-left: 15px;
+}
+.image-différente{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* Styles pour les sections de contenu */
+.content {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.content:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Styles pour les images */
+.image {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.image img:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.suite {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.suite a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.suite a:hover {
+  background-color: #0056b3;
+}

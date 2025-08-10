@@ -1,0 +1,87 @@
+/* Styles de base */
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Arial', sans-serif;
+}
+
+
+
+.container2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Styles des sections individuelles */
+section {
+  flex: 1 0 22%; /* Ajustement pour 4 images par ligne */
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform .3s ease-in-out;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+/* Styles pour les titres et les images */
+section h2 {
+  text-align: center;
+  color: #333;
+  padding: 10px 0;
+}
+
+section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Styles pour les textes explicatifs */
+.diagonal-text {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  section {
+    flex: 1 0 45%; /* Ajustement pour 2 images par ligne */
+  }
+}
+
+@media (max-width: 768px) {
+  .container2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    flex: 0 0 80%; /* Ajustement pour 1 image par ligne */
+  }
+}
+
+.suite {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.suite a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.suite a:hover {
+  background-color: #0056b3;
+}
+

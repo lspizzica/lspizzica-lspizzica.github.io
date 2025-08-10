@@ -1,0 +1,113 @@
+/* Style général */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eaeaea;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Animation pour le titre principal */
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+p{
+  margin-left: 16px;
+}
+.title1 h1 {
+  text-align: center;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+/* Modification ici pour les autres titres */
+h2, h3, .title2 h1, .title3 h1, .title4 h1 {
+  color: red !important; /* Rouge */
+}
+.title1 h2{
+  text-align: center;
+}
+section {
+  background: white;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+p {
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+  .container {
+      margin: 10px;
+  }
+
+  h1, h2, h3 {
+      font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+      margin: 5px;
+      padding: 10px;
+  }
+
+  img {
+      margin-top: 10px;
+  }
+}
+.suite {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.suite a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.suite a:hover {
+  background-color: #0056b3;
+}

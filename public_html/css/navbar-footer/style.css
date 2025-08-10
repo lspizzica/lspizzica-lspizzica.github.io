@@ -1,0 +1,112 @@
+/* Navbar Styling */
+.navbar {
+    background-color: #0080ff; /* Navbar background color */
+    z-index: 1000; /* Assure que la navbar est au-dessus du contenu */
+}
+.navbar-brand {
+    font-size: 1.5rem; /* Navbar brand font size */
+    font-weight: bold; /* Make the brand text bold */
+    margin-left: 15px;
+
+    
+}
+.navbar-nav .nav-link:last-child {
+    margin-right: 20px; /* Ajustez la marge comme vous le souhaitez */
+}
+.nav-link {
+    color: #ffffff !important; /* Navbar links text color */
+    font-size: 1.1rem; /* Navbar links font size */
+    font-weight: bold !important; /* Make the links text bold */
+}
+
+/* Align navbar items to the right */
+.navbar-nav {
+    margin-left: auto;
+}
+
+/* Active Link Styling */
+.active-link{
+    color: #fa0000 !important;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 10px; /* Adjust margin as needed */
+    }
+
+    .navbar-toggler {
+        margin-right: 10px; /* Adjust margin as needed */
+    }
+
+    .navbar-collapse {
+        background-color: #0080ff; /* Change background color of collapsed navbar */
+        border-top: 1px solid #555; /* Add border top for better visibility */
+        padding: 10px; /* Adjust padding as needed */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 15px; /* Adjust padding as needed */
+        text-align: center; /* Align links to the center */
+    }
+
+    .ml-auto {
+        margin-left: auto !important; /* Align navbar links to the right */
+    }
+    
+}
+.logo {
+    width: 60px; /* Ajustez cette valeur selon vos besoins */
+    height: auto; /* Assurez-vous que la hauteur s'ajuste automatiquement pour conserver les proportions de l'image */
+}
+
+
+/********************************************************************** CSS personnalisé pour le footer**********************************************************************/
+
+/* Style général du footer */
+#footer-copyright {
+    background-color: #0080ff; /* Couleur de fond */
+    color: #ffffff !important; /* Couleur du texte */
+    padding: 5px 0; /* Espacement intérieur */
+    text-align: center; /* Alignement du texte */
+}
+
+/* Style du texte */
+#footer-copyright p {
+    margin: 0; /* Supprime les marges par défaut */
+    font-size: 16px; /* Taille de la police */
+}
+
+/* Style du lien */
+#footer-copyright a {
+    color: #ffffff; /* Couleur du lien */
+    text-decoration: none; /* Supprime la soulignement du lien */
+}
+
+/* Style au survol du lien */
+#footer-copyright a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+.texte{
+    color: #ffffff;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content,
+  .container {
+    flex: 1 0 auto; /* Le contenu prendra l'espace disponible, mais poussera le footer vers le bas */
+  }
+  
+  .footer {
+    flex-shrink: 0;
+    margin-top: auto; /* Pousse le footer vers le bas */
+  }

@@ -1,0 +1,130 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url('../image/projets.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed; /* Garde l'image en place lors du défilement */
+}
+.projet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project img {
+    width: 100%;
+    height: 200px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Ajustement de la taille de l'image tout en préservant son ratio d'aspect */
+    border-bottom: 1px solid #ddd;
+}
+/* Header styles */
+h1 {
+    text-align: center;
+    color: #ffffff !important; /* Couleur du texte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre portée sur le texte */
+}
+
+/* Gallery styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.project h2 {
+    text-align: center;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 80%;
+    overflow-y: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff; /* Couleur de l'icône de fermeture */
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ccc; /* Couleur de l'icône de fermeture au survol */
+}
+
+/* Popup responsive styles */
+@media (max-width: 768px) {
+    .popup-content {
+        max-width: 90%; /* Réduire la largeur maximale sur mobile */
+        height: auto; /* Adapter la hauteur pour ne pas dépasser l'écran */
+        padding: 15px; /* Réduire légèrement le padding pour un meilleur rendu sur mobile */
+    }
+
+    .popup {
+        align-items: flex-start; /* Aligner le popup en haut de l'écran sur mobile */
+        padding: 10px; /* Ajouter un padding autour du popup pour éviter qu'il ne touche les bords de l'écran */
+    }
+
+    .close {
+        font-size: 18px; /* Réduire la taille de l'icône de fermeture sur mobile */
+        top: 5px;
+        right: 5px;
+    }
+}
+
+/* Adjustments for smaller phones */
+@media (max-width: 480px) {
+    .popup-content {
+        max-width: 95%; /* Réduire davantage la largeur pour les très petits écrans */
+        padding: 10px;
+    }
+
+    .popup {
+        padding: 5px; /* Encore plus de padding pour les petits écrans */
+    }
+}
+

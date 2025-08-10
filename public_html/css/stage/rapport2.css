@@ -1,0 +1,69 @@
+/* Styles spécifiques pour le contenu du rapport */
+.report-content {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Ajustez selon la largeur souhaitée */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.report-content h1, .report-content h2, .report-content h3 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.report-content h1 {
+    color: #2c3e50; /* Bleu foncé */
+}
+
+.report-content h2 {
+    color: #8e44ad; /* Violet */
+}
+
+.report-content p {
+    color: #34495e; /* Bleu-gris */
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.report-content a {
+    color: #2980b9;
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+.report-content a:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+}
+
+.report-content ul, .report-content ol {
+    margin-left: 20px;
+    margin-bottom: 1em;
+}
+
+.report-content li {
+    margin-bottom: 0.5em;
+}
+
+.report-content blockquote {
+    border-left: 4px solid #8e44ad; /* Bordure violette pour les citations */
+    background: #f4f4f4;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.report-content code {
+    background: #ecf0f1;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Règles média pour responsivité */
+@media only screen and (max-width: 980px) {
+    .report-content {
+        margin: 20px;
+        padding: 15px;
+    }
+}

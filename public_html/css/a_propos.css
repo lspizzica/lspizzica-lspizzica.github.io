@@ -1,0 +1,189 @@
+/* Style général du corps de la page */
+html, body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    height: 100% !important;
+    display: flex;
+    flex-direction: column; /* Utilisation de flexbox pour s'assurer que le footer reste en bas */
+}
+
+.container {
+    margin-top: 40px !important; /* Ajustez cette valeur en fonction de la hauteur de votre barre de navigation */
+}
+
+.hidden {
+    display: none;
+}
+
+.arrow-right,
+.arrow-left {
+    position: fixed;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    cursor: pointer;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.arrow-left {
+    left: 50%; /* Part du centre de l'écran */
+    border-right: 20px solid #000; /* couleur de la flèche */
+    animation-name: landAndMoveLeft;
+}
+
+.arrow-right {
+    left: 50%; /* Part du centre de l'écran */
+    border-left: 20px solid #000 !important; /* couleur de la flèche */
+    animation-name: landAndMoveRight;
+}
+
+.arrow-right {
+    margin-right: 20px; /* Marge de 20px sur la droite */
+    right: 20px; /* Position finale à droite */
+}
+
+.arrow-left {
+    margin-left: 20px; /* Marge de 20px sur la gauche */
+    left: 20px; /* Position finale à gauche */
+}
+
+/* Ajout des animations */
+@keyframes landAndMoveLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+        left: 50%;
+        top: 50%;
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(0, -50%) scale(1);
+        left: 20px; /* Position finale avec la marge de 20px */
+        top: 50%;
+    }
+}
+
+@keyframes landAndMoveRight {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+        left: 50%;
+        top: 50%;
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        transform: translate(-100%, -50%) scale(1);
+        left: calc(100% - 20px); /* Position finale avec la marge de 20px */
+        top: 50%;
+    }
+}
+
+/* Titres */
+.Titre h2 {
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out;
+    text-align: center;
+}
+
+/* Animation à l'arrivée sur la page */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles des sections et animations de survol */
+.content, .skill-set, .qualitées-set, .education-horizontal-timeline {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.content:hover, .skill-set:hover, .education-horizontal-timeline:hover {
+    transform: scale(1.02);
+}
+
+/* Styles pour les compétences */
+.skill-item, .qualitées-item {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px;
+    opacity: 1; /* Définit l'opacité à 1 */
+}
+
+/* Styles des formations et de leur chronologie */
+.education-horizontal-timeline .timeline-content {
+    padding: 10px;
+    background-color: #e9ecef;
+    border-left: 3px solid #007bff;
+    transition: border-color 0.3s ease;
+}
+
+.education-horizontal-timeline .timeline-content:hover {
+    border-left: 3px solid #0056b3;
+}
+
+/* Responsive design pour petits écrans */
+@media (max-width: 768px) {
+    .skill-item, .timeline-content {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .education-horizontal-timeline .row {
+        margin-left: 30px;
+    }
+    #commerce .qualitées {
+        margin-left: 30px !important;
+    }
+    #commerce .skills {
+        margin-left: 30px;
+    }
+    .arrow-right,
+    .arrow-left {
+        position: fixed !important; /* Fixe les flèches par rapport à la fenêtre */
+        
+        z-index: 9999 !important; /* S'assure que les flèches apparaissent au-dessus du contenu */
+        transform: translateY(-50%) !important;
+    }
+
+    .arrow-left {
+        left: 10px !important; /* Place la flèche gauche légèrement à l'intérieur de l'écran */
+    }
+
+    .arrow-right {
+        right: 10px !important; /* Place la flèche droite légèrement à l'intérieur de l'écran */
+    }
+}
+
+
+
+

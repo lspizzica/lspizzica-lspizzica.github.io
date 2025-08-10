@@ -1,0 +1,171 @@
+/* Structure HTML de base */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../image/association.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Arrière-plans dynamiques */
+.handicap-bg {
+    background-image: url('../image/association3.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.ecoute-bg {
+    background-image: url('../image/ecoute.jpg') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Conteneur principal centré */
+.d-flex {
+    flex: 1; /* occupe l'espace restant */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style de la section principale */
+.content {
+    background-color: #ffffffcc;
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Sections individuelles */
+.section-container {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #34495e;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Flèches de navigation */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.35);
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 0 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 100;
+    line-height: 1;
+    width: 50px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow:hover,
+.arrow:focus {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translateY(-50%) scale(1.1);
+    outline: none;
+}
+
+.arrow-left {
+    left: -60px;
+}
+
+.arrow-right {
+    right: -60px;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .arrow-left,
+    .arrow-right {
+        font-size: 2rem;
+        width: 35px;
+        height: 35px;
+    }
+
+    .arrow-left {
+        left: 0;
+    }
+
+    .arrow-right {
+        right: 0;
+    }
+}

@@ -1,0 +1,68 @@
+/* CSS pour le contenu du rapport de stage */
+
+body {
+    background-image: url('../image/fond.gif');
+    background-repeat: no-repeat;
+    background-size: cover; /* Pour ajuster la taille de l'image au conteneur */
+    
+}
+
+/* Style pour la section de portfolio */
+.portfolio {
+    text-align: center; /* Alignement du texte au centre */
+}
+
+/* Style pour les détails du portfolio */
+.portfolio-details {
+    max-width: 1200px; /* Largeur maximale */
+    margin: 0 auto; /* Centrer horizontalement */
+}
+
+/* Style pour le contenu du portfolio */
+.portfolio-content {
+    margin-top: 30px; /* Espacement en haut */
+}
+
+/* Style pour les colonnes */
+.col-sm-6 {
+    width: 50%; /* Largeur de 50% */
+    float: none; /* Annuler le flottement */
+    display: inline-block; /* Afficher en tant que bloc en ligne */
+    vertical-align: middle; /* Alignement vertical au milieu */
+    text-align: center; /* Alignement du texte au centre */
+}
+
+.item img {
+    max-width: 100%; /* Largeur maximale de l'image */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+    border-radius: 10px; /* Bordure arrondie */
+    transition: transform 0.3s ease; /* Effet de transition */
+    display: inline-block; /* Afficher en tant que bloc en ligne */
+    vertical-align: middle; /* Alignement vertical au milieu */
+    border: 5px solid #ff0000; /* Bordure de 2px solide de couleur grise */
+    box-sizing: border-box; /* La taille de la bordure est incluse dans les dimensions de l'élément */
+}
+.background-section{
+    margin-top: 15%;
+}
+
+/* Effet de survol sur les images */
+.item:hover img {
+    transform: scale(1.05); /* Grossissement de l'image */
+}
+
+/* Style pour les liens */
+.item a {
+    display: block; /* Afficher comme bloc */
+    text-decoration: none; /* Pas de soulignement */
+    color: #333; /* Couleur du texte */
+}
+
+
+/* Pour les écrans de taille inférieure ou égale à 768px (typiquement les téléphones) */
+@media (max-width: 768px) {
+
+    .item{
+        margin-top: 100px;
+    }
+}
